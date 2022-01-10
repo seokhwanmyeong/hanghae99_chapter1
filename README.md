@@ -9,16 +9,19 @@ Team 6. Project_
 3. TECH
 
 
-4. Project Directory Structure
+4. S.A(Starting Assignment)
 
 
-5. Function_PAGE
+5. Project Directory Structure
 
 
-6. Function_API Table
+6. Function_PAGE
 
 
-7. Members
+7. Function_API Table
 
 
-8. Trouble Shooting
+8. Members
+
+
+9. Trouble Shooting

@@ -38,6 +38,143 @@ J-GATI는 조깅 파트너를 모집하는 웹 애플리케이션입니다.
 <br>
 <hr/>
 <h3 align="left">7. Function_API Table</h3>
+<table width="100%">
+  <thead>
+    <tr>
+      <th>기능</th>
+      <th>Method</th>
+      <th>URL</th>
+      <th>request</th>
+      <th>response </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> 회원가입 페이지 로드</td>
+      <td>GET</td>
+      <td></td>
+      <td></td>
+      <td>render_template('join.html', msg=msg)</td>
+    </tr>
+    <tr>
+      <td> 메인화면 페이지 로드</td>
+      <td>GET</td>
+      <td></td>
+      <td></td>
+      <td> render_template('index.html', msg=msg)</td>
+    </tr>
+    <tr>
+      <td>로그인</td>
+      <td>POST</td>
+      <td> /api/login</td>
+      <td> {'id': id, 'pw'}</td>
+      <td>
+          로그인 성공 - {'result': 'success', 'token': token} 
+          로그인 실패 - {'result': 'fail', 'msg': '아이디/비밀번호가 일치하지 않습니다.'}
+      </td>
+    </tr>
+    <tr>
+      <td>회원가입</td>
+      <td>POST</Td>
+      <td> /api/membership</td>
+      <td>{'id' : id, 'pw' : pw, 'email' : email}</td>
+      <td> 가입 완료 메세지</td>
+    </tr>
+    <tr>
+      <td>회원가입_중복검사</td>
+      <td>POST</td>
+      <td> /api/membership</td>
+      <td>{'id' : id}</td>
+      <td>
+        중복 존재 - {'result': 'success', 'msg': '중복된 아이디입니다.'}
+        중복 미존재 - {'result': 'fail', 'msg': '가능한 아이디입니다.'}
+      </td>
+    </tr>
+    <tr>
+      <td>리스트 페이지로드</td>
+      <td>GET</td>
+      <td></td>
+      <td></td>
+      <td> render_template('list.html', msg=msg)</td>
+    </tr>
+    <tr>
+      <td>글 작성</td>
+      <td>POST</td>
+      <td> /api/write</td>
+      <td>{ 'title' : title, 
+
+ 'date': date, 
+
+ 'place': place, 
+
+ 'attendance': attendance, 
+
+ 'content': content}</td>
+      <td> 작성 글 데이터</td>
+    </tr>
+    <tr>
+      <td>글 검색</td>
+      <td>GET</td>
+      <td> /api/search</td>
+      <td> query={검색어}</td>
+      <td> 검색 결과 리스트</td>
+    </tr>
+    <tr>
+      <td>글 수정</td>
+      <td>POST</td>
+      <td> /api/update</td>
+      <td>{ 'title' : title, 
+
+'date': date, 
+
+'place': place, 
+
+'attendance': attendance, 
+
+'content': content}</td>
+      <td> 작성 글 데이터</td>
+    </tr>
+    <tr>
+      <td>글 삭제</td>
+      <td>POST</td>
+      <td> /api/delete
+
+</td>
+      <td> {'ObjectID' : ObjectID}
+
+</td>
+      <td> 작성 글 데이터 삭제글 리스트
+
+</td>
+    </tr>
+    <tr>
+      <td>참가신청</td>
+      <td>POST</td>
+      <td> /api/applyParticipation
+
+</td>
+      <td> {'ObjectID' : ObjectID}
+
+</td>
+      <td> 작성 글 데이터
+
+</td>
+    </tr>
+    <tr>
+      <td>참</td>
+      <td>POST</td>
+      <td> /api/applyParticipation
+
+</td>
+      <td> {'ObjectID' : ObjectID}
+
+</td>
+      <td> 작성 글 데이터
+
+</td>
+    </tr>
+  </tbody>
+</table>
 <br>
 <br>
 <hr/>
